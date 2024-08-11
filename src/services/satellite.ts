@@ -1,8 +1,8 @@
 import { envClient } from "@/lib/env";
 import axios from "axios";
 
-const sattelite = axios.create({
+const satellite = axios.create({
   baseURL: envClient.NEXT_PUBLIC_API_URL,
 });
 
-export default sattelite;
+export default satellite;
