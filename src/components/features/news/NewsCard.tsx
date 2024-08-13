@@ -8,7 +8,7 @@ const NewsCard = (props: Props) => {
   return (
     <Link
       className="group rounded-xl focus:outline-none flex flex-col min-h-72 border shadow-sm"
-      href="/news"
+      href="/news/detail?id=1"
     >
       <div>
         <div className="aspect-[16/9]">
