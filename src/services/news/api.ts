@@ -3,9 +3,7 @@ import satellite from "../satellite";
 import { News, NewsParams } from "@/types/news.type";
 
 export const getNews = async (params?: NewsParams) => {
-  const res = await satellite.post<ReturnResponse<News>>("/news", {
-    ...params,
-  });
+  const res = await satellite.post<ReturnResponse<News[]>>("/news", params);
 
   return res.data;
 };

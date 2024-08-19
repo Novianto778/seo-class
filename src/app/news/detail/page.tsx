@@ -1,5 +1,5 @@
 import { envClient } from "@/lib/env";
-import NewsDetail from "@/pages/NewsDetail";
+import NewsDetail from "@/main-page/NewsDetail";
 import satellite from "@/services/satellite";
 import { NewsParams } from "@/types/news.type";
 import { Metadata } from "next";

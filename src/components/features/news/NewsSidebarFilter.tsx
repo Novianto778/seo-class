@@ -6,8 +6,8 @@ type Props = {
 };
 
 const NewsFilterSidebar = ({ searchParams }: Props) => {
-  const fromValue = searchParams.from?.toString();
-  const toValue = searchParams.to?.toString();
+  const fromValue = searchParams?.from?.toString();
+  const toValue = searchParams?.to?.toString();
   return (
     <>
       <form
@@ -58,7 +58,7 @@ const NewsFilterSidebar = ({ searchParams }: Props) => {
         </label>
         <div className="relative w-full mb-8">
           <input
-            value={searchParams.q}
+            value={searchParams?.q}
             type="text"
             id="q"
             name="q"

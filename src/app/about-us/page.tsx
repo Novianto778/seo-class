@@ -1,5 +1,5 @@
 import MainLayout from "@/components/layouts/MainLayout";
-import AboutUs from "@/pages/AboutUs";
+import AboutUs from "@/main-page/AboutUs";
 import { Metadata } from "next";
 import React from "react";
 

@@ -1,6 +1,6 @@
 import MainLayout from "@/components/layouts/MainLayout";
 import { envClient } from "@/lib/env";
-import News from "@/pages/News";
+import News from "@/main-page/News";
 import { NewsParams } from "@/types/news.type";
 import { Metadata } from "next";
 import React from "react";

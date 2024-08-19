@@ -1,6 +1,6 @@
 import MainLayout from "@/components/layouts/MainLayout";
 import { envClient } from "@/lib/env";
-import Home from "@/pages/Home";
+import Home from "@/main-page/Home";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -8,6 +8,9 @@ export const metadata: Metadata = {
     canonical: envClient.SITE_URL,
   },
 };
+
+export const dynamic = "force-dynamic";
+// export const revalidate = 10;
 
 export default function HomePage() {
   return (
