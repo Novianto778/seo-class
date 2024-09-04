@@ -1,12 +1,17 @@
-import { Button } from "@/components/ui/button";
+"use client";
+import { newsDetailOptions } from "@/services/news/query";
+import { useSuspenseQuery } from "@tanstack/react-query";
 import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
 import React from "react";
 
-type Props = {};
+type Props = {
+  id: string;
+};
 
-const NewsDetail = (props: Props) => {
-  const tags = ["Tag 1", "Tag 2", "Tag 3"];
+const NewsDetail = ({ id }: Props) => {
+  const { data } = useSuspenseQuery(newsDetailOptions(id));
+  const tags = data?.data.tags.split(",") || [];
   return (
     <>
       <section className="relative pt-12 pb-20 bg-indigo-600">
@@ -19,7 +24,7 @@ const NewsDetail = (props: Props) => {
             <span className="ml-4">Back to News</span>
           </Link>
           <h1 className="text-white font-manrope font-semibold text-4xl min-[500px]:text-5xl leading-tight mb-8">
-            Judul Berita
+            {data?.data.title}
           </h1>
           <div className="flex items-center justify-between">
             <div className="data">
@@ -34,7 +39,7 @@ const NewsDetail = (props: Props) => {
                 ))}
               </p>
               <p className="font-normal text-lg leading-7 text-white mt-4">
-                Author: Nama Author
+                Author: {data?.data.author}
               </p>
             </div>
           </div>

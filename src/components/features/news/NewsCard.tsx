@@ -11,7 +11,7 @@ const NewsCard = ({ data }: Props) => {
   return (
     <Link
       className="group rounded-xl focus:outline-none flex flex-col min-h-72 border shadow-sm"
-      href="/news/detail?id=1"
+      href={`/news/detail?id=${data.id}`}
     >
       <div>
         <div className="aspect-[16/9]">

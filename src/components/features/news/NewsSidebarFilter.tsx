@@ -1,3 +1,4 @@
+import { filterNews } from "@/services/news/actions";
 import { NewsParams } from "@/types/news.type";
 import { Search } from "lucide-react";
 
@@ -11,7 +12,7 @@ const NewsFilterSidebar = ({ searchParams }: Props) => {
   return (
     <>
       <form
-        // action={filterNews}
+        action={filterNews}
         className="sticky top-8 rounded-xl border border-gray-300 bg-white p-6 w-full md:max-w-sm"
       >
         <h6 className="font-semibold text-base leading-7 text-black mb-5">
@@ -30,7 +31,7 @@ const NewsFilterSidebar = ({ searchParams }: Props) => {
               type="date"
               name="from"
               id="from"
-              value={fromValue}
+              defaultValue={fromValue}
             />
           </div>
           <div className="relative w-full">
@@ -45,7 +46,7 @@ const NewsFilterSidebar = ({ searchParams }: Props) => {
               type="date"
               name="to"
               id="to"
-              value={toValue}
+              defaultValue={toValue}
             />
           </div>
         </div>
@@ -58,7 +59,7 @@ const NewsFilterSidebar = ({ searchParams }: Props) => {
         </label>
         <div className="relative w-full mb-8">
           <input
-            value={searchParams?.q}
+            defaultValue={searchParams?.q}
             type="text"
             id="q"
             name="q"
