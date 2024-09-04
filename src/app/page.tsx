@@ -1,6 +1,16 @@
 import MainLayout from "@/components/layouts/MainLayout";
-import Home from "@/pages/Home";
-import Image from "next/image";
+import { envClient } from "@/lib/env";
+import Home from "@/main-page/Home";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: envClient.SITE_URL,
+  },
+};
+
+export const dynamic = "force-dynamic";
+// export const revalidate = 10;
 
 export default function HomePage() {
   return (

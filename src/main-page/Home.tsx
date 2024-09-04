@@ -2,7 +2,6 @@ import UpcomingEventTimeline from "@/components/features/events/UpcomingEventTim
 import Feature from "@/components/features/home/Feature";
 import Hero from "@/components/features/home/Hero";
 import NewsSection from "@/components/features/news/NewsSection";
-import React from "react";
 
 type Props = {};
 

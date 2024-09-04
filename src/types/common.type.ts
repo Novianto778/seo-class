@@ -1,5 +1,5 @@
 export interface ReturnResponse<T> {
-  data: T[];
+  data: T;
   pagination: Pagination;
 }
 export interface Pagination {
