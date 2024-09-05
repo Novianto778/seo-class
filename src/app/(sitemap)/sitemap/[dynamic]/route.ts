@@ -16,7 +16,7 @@ export async function GET(req: Request, { params }: RequestParams) {
   const urlList = [
     {
       type: "news",
-      getter: (page: number) => getNewsSitemap(page),
+      getter: (page: string) => getNewsSitemap(page),
     },
   ];
 
@@ -27,7 +27,7 @@ export async function GET(req: Request, { params }: RequestParams) {
   }
 
   try {
-    const sitemap = await url.getter(parseInt(page));
+    const sitemap = await url.getter(page);
     if (sitemap.length === 0) redirect("/not-found");
     return getServerSideSitemap(sitemap);
   } catch (error) {

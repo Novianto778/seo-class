@@ -5,7 +5,7 @@ import { News } from "@/types/news.type";
 
 import { ISitemapField } from "next-sitemap";
 
-export const getNewsData = async (page = 1, limit = 10) => {
+export const getNewsData = async (page = "1", limit = "10") => {
   try {
     const result = await getNews({ page, limit });
 
@@ -22,7 +22,7 @@ export const getNewsData = async (page = 1, limit = 10) => {
 };
 
 export default async function getNewsSitemap(
-  page: number
+  page: string
 ): Promise<ISitemapField[]> {
   const result = await getNewsData(page);
   const data = result?.data;
