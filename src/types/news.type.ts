@@ -1,6 +1,6 @@
 export interface NewsParams {
-  limit?: number;
-  page?: number;
+  limit?: string;
+  page?: string;
   from?: Date;
   to?: Date;
   q?: string;

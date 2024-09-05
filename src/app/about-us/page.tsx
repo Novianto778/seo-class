@@ -1,5 +1,5 @@
 import MainLayout from "@/components/layouts/MainLayout";
-import AboutUs from "@/pages/AboutUs";
+import AboutUs from "@/main-pages/AboutUs";
 import React from "react";
 
 type Props = {};

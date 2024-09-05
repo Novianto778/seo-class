@@ -1,5 +1,5 @@
 import MainLayout from "@/components/layouts/MainLayout";
-import Events from "@/pages/Events";
+import Events from "@/main-pages/Events";
 import { EventParams } from "@/types/events.type";
 import React from "react";
 

@@ -1,4 +1,4 @@
-import NewsDetail from "@/pages/NewsDetail";
+import NewsDetail from "@/main-pages/NewsDetail";
 import React from "react";
 
 type Props = {};

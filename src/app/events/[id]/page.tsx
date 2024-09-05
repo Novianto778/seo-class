@@ -1,5 +1,5 @@
 import MainLayout from "@/components/layouts/MainLayout";
-import EventDetail from "@/pages/EventDetail";
+import EventDetail from "@/main-pages/EventDetail";
 import React from "react";
 
 type Props = {};

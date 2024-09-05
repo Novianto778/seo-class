@@ -1,5 +1,5 @@
 import MainLayout from "@/components/layouts/MainLayout";
-import News from "@/pages/News";
+import News from "@/main-pages/News";
 import { NewsParams } from "@/types/news.type";
 import React from "react";
 
