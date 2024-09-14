@@ -10,7 +10,7 @@ function makeQueryClient() {
       queries: {
         staleTime: 30 * 60 * 1000, // 30 minutes
         // refetchInterval: 30 * 60 * 1000, // 30 minutes
-        // gcTime: 30 * 60 * 1000, // 30 minutes
+        gcTime: 2 * 60 * 1000, // 2 minutes
       },
       dehydrate: {
         // include pending queries in dehydration
