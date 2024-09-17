@@ -4,7 +4,7 @@ import { getNews, getNewsDetail } from "./api";
 
 export const newsSectionOptions = {
   queryKey: ["news", "section"],
-  queryFn: () => getNews({ limit: 3 }),
+  queryFn: () => getNews({ limit: "3" }),
 };
 
 export const useGetPosts = (params?: NewsParams) => {
