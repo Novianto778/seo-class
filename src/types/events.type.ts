@@ -1,18 +1,19 @@
 export interface EventParams {
-  limit?: number;
-  page?: number;
-  from?: Date;
-  to?: Date;
+  limit?: string;
+  page?: string;
+  from?: string;
+  to?: string;
   q?: string;
 }
 
 export interface Event {
   id: number;
   title: string;
-  author: string;
-  publicationdate: Date;
-  content: string;
-  tags: string;
+  date: Date;
+  time: string;
+  description: string;
+  location: string;
+  registrationurl: string;
   imageurl: string;
   created_at: Date;
   updated_at: Date;
